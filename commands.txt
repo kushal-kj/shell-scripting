@@ -1,0 +1,42 @@
+cat /etc/os-release = To check which linux distribution is being used.
+cat /etc/shells = To check which type of shells are present in my Linux distribution.
+ls -ltr = To check the permissions of any file in the current folder for READ,WRITE,EXECUTE (rwx) option.
+chmod +x "filename" = It gives executable permission to the file (i.e. x in rwx).
+#!/bin/bash = Shebang line for all files.
+
+1)echo $0 = To check which type of shell is being used.
+2)readonly "variable name" = To set a variable name into readonly mode that cannot be changed throughout the whole script.
+3)echo "Printing variable: $variable_name" = This prints the variable name.
+4)array=(1 2.3 hello "hello world") = Defining an array.
+5)echo ${array[*]} = Printing all the values of an array and you can indicate the index numbers for printing specific index values.
+6)echo ${#array[*]} = Prints the length of the array.
+7)echo ${array[*]:1:2} = This prints values from 1st index and and only 2 elements from that index.
+8)array+=(New 3.2 good) = Appends the new elements to the current array.
+9)declare -A array = We need to declare the array like this before using key values. 
+10)array=([name]=stealth [age]=100) =  This is they usage of key values , just like properties.
+11)echo ${array[name]} = While printing a key value, we need to specify the term to be printed insteadof index number.
+12)string="string name" = To initialize a string.
+13)echo ${#string1} = To print the length of a string.
+14)echo ${string1^^} = To print the whole string in upper case
+15)echo ${string1,,} = To print the whole string in lower case.
+16)newString=${oldString/good/bad} = To replace the word in the new string from an old string.
+17)echo ${string1:2:2} = Used to slice a string where it takes from 2nd index and prints 2 elements . 
+18)read -p "Ask anything" variable_name = To read the user input.
+19)sum=($x+$y) = Adding 2 numbers.
+20)echo "sum : $(($x+$y))" : Adding 2 numbers using another method.
+21) 
+if [[ $marks -gt 80]]
+then
+echo "Distinction"
+elif [[ $marks -lt 80 && $marks -gt 40]]
+then
+echo "Average"
+else
+echo "Failed"		
+fi			= if-elif syntax
+22)read case 
+   case $var_name in
+	1)date;;
+	2)echo "Hello";;
+   esac				= switch case
+23)
